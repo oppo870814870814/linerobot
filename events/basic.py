@@ -1,85 +1,87 @@
 from line_bot_api import *
 
-from line_bot_api import *
-
 
 def about_us_event(event):
-    emoji = [
+    emojis = [
         {
-            "index": 0,
-            "productId": "5ac2197b040ab15980c9b43d",
-            "emojiId": "002"
-        },
+            "index": 0, 
+            "productId": "5ac21a18040ab15980c9b43e", 
+            "emojiId": "009"
+        }, 
         {
-            "index": 17,
-            "productId": "5ac2197b040ab15980c9b43d",
-            "emojiId": "006"
+            "index": 16, 
+            "productId": "5ac21a18040ab15980c9b43e", 
+            "emojiId": "014"
         }
     ]
-    text_message = TextSendMessage(text='''$ Master Finance $
-Hello! 您好，歡迎您成為 Master Finance 的好友！
 
-我是Master 財經小幫手
+    welcome_message = TextSendMessage(text='''$ Agave Finance $
+    您好，歡迎加入成為 Agave Finance 的好友!!!
+    我是Agave財經小幫手~
+    下方選單有：
+    股票查詢、油價查詢、匯率查詢、自動提醒、資訊整理、使用說明
+    使用上有任何問題可以參考使用說明''', emojis=emojis)
 
--這裡有股票、匯率資訊哦～
--直接點選下方[圖中]選單功能
-
-期待您的光臨''', emojis=emoji)
-    sticker_message = StickerMessage(
-        package_id='8522',
-        sticker_id='16581271'
+    sticker_message = StickerSendMessage(
+        package_id="11537", sticker_id="52002735"
     )
+
+    button_template = Template_msg()
+
     line_bot_api.reply_message(
-        event.reply_token,
-        [text_message, sticker_message])
-    # message = TextSendMessage(text=event.message.text)
-    # line_bot_api.reply_message(event.reply_token, message)
-################################################################################################
-def push_msg(event , msg):
-    try :
+        event.reply_token, 
+        [welcome_message, sticker_message, button_template]
+    )
+
+
+def push_msg(event, msg):
+    try:
         user_id = event.source.user_id
-        line_bot_api.push_message(user_id , TextSendMessage(text = msg))
-    except :
+        line_bot_api.push_message(user_id, TextSendMessage(text=msg))
+    except:
         room_id = event.source.room_id
-        line_bot_api.push_message(room_id , TextSendMessage(text = msg))
+        line_bot_api.push_message(room_id, TextSendMessage(msg))
+
 
 def Usage(event):
-    push_msg(event , "  ♥查詢方法♥  \
-            \n\
-            \n 小幫手可以查詢油價\
-            \n\
-            \n 油價通知 輸入查詢油價\
-            \n 匯率通知 輸入查詢油價\
-            \n 匯率兌換 換匯USD/TWD\
-            \n 股價查詢 輸入 股票代號")
+    push_msg(
+        event, 
+        """
+        ℹ查詢方法ℹ
+        🧞‍♂小幫手可以查詢股價、油價、匯率
+        
+        ➊股價查詢➡輸入#股票代號
+        ➋油價查詢➡輸入#92、95、98、超柴
+        ➌匯率查詢➡輸入#國家
+        ➍test
+        ➎test
+        ➏test
+        """
+    )
 
-###############################################################################################################
 
-def abc(event):
-    if event.message.text == "小幫手":
-        buttons_template = TemplateSendMessage(
-            alt_text="小幫手 template" ,
+def Template_msg():
+    button_template = TemplateSendMessage(
+            alt_text="小幫手template", 
             template=ButtonsTemplate(
-                title='選擇福務 ',
-                text=' 請選擇 ',
-                thumbnail_image_url='https://i.imgur.com/EoL3JPC.jpg' ,
-                actions = [
+                title="選擇服務", 
+                text="請選擇", 
+                thumbnail_image_url="https://i.imgur.com/27uxIhZ.jpg", 
+                actions=[
                     MessageTemplateAction(
-                        label = "油價查詢" ,
-                        text = "油價查詢"
-                    ) , 
+                        label="股價查詢", 
+                        text="股價查詢"
+                    ), 
                     MessageTemplateAction(
-                        label = "匯率查詢" , 
-                        text = "匯率查詢"
-                    ) , 
+                        label="油價查詢", 
+                        text="油價查詢"
+                    ), 
                     MessageTemplateAction(
-                        label = "股價查詢" , 
-                        text = "股價查詢"
-                    )
+                        label="匯率查詢", 
+                        text="匯率查詢"
+                    ), 
                 ]
-            )
+                )
         )
-        line_bot_api.reply_message(event.reply_token , buttons_template)
-
-########################################################################################################################
-
+    
+    return button_template
