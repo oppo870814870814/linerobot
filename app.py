@@ -31,13 +31,16 @@ def handle_message(event):
         about_us_event(event)
     if message_text == '查詢功能' :
         Usage(event)
+    if event.message.text == '小幫手' :
+        abc(event)
 ###################################################################
-
-    if event.message.text == "油價" :
-        content = oil_price()
-        line_bot_api.reply_message(
-            event.reply_token , 
-            TextSendMessage(text = content))
+    if message_text == '油價' :
+        oil_price(event)
+    # if event.message.text == "油價" :
+    #     content = oil_price()
+    #     line_bot_api.reply_message(
+    #         event.reply_token , 
+    #         TextSendMessage(text = content))
         
 
 @handler.add(FollowEvent)
