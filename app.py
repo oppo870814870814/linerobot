@@ -34,12 +34,6 @@ def handle_message(event):
     if event.message.text == '小幫手' :
         abc(event)
 ###################################################################
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    message_text = str(event.message.text).lower()
-
-    if message_text == '使用說明':
-        about_us_event(event)
 
     if event.message.text == "油價" :
         content = oil_price()
