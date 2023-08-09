@@ -71,7 +71,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -83,7 +83,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -95,7 +95,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           }
         ],
@@ -123,7 +123,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -135,7 +135,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -147,7 +147,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           }
         ],
@@ -175,7 +175,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -187,7 +187,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -199,7 +199,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           }
         ],
@@ -227,7 +227,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -239,7 +239,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -251,7 +251,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           }
         ],
@@ -279,7 +279,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -291,7 +291,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -303,7 +303,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           }
         ],
@@ -331,7 +331,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -343,7 +343,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           },
           {
@@ -355,7 +355,7 @@ def show_Button():
             },
             "gravity": "center",
             "style": "primary",
-            "color": "#CC561E",
+            "color": "#97CBFF",
             "margin": "sm"
           }
         ],
