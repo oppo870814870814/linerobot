@@ -108,6 +108,14 @@ def handle_message(event):
             TextSendMessage(text=content)
         )
 
+
+    #####################################匯率區#######################################
+    if re.match('幣別種類' , emsg):
+        message = show_Button()
+        line_bot_api.reply_message(event.replay_token , message)
+
+
+
      # ############"@小幫手"############
     if message_text == "@小幫手":
         button_template = Template_msg()
