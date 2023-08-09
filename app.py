@@ -59,7 +59,7 @@ def handle_message(event):
         line_bot_api.push_message(uid , btn_msg)
         return 0
     
-    if(emsg.startswitch('#')):
+    if(emsg.startswith('#')):
         text = emsg[1:]
         content = ''
 
