@@ -75,7 +75,7 @@ def Template_msg():
                     ), 
                     MessageTemplateAction(
                         label="油價查詢", 
-                        text="油價查詢"
+                        text="想知道油價"
                     ), 
                     MessageTemplateAction(
                         label="匯率查詢", 
