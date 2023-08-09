@@ -53,11 +53,11 @@ def handle_message(event):
         )
 
     #股價查詢
-    if re.match("想知道股價[0-9]" , msg):
-        stockNumber = msg[5:9]
-        btn_msg = stock_reply_other(stockNumber)
-        line_bot_api.push_message(uid , btn_msg)
-        return 0
+    # if re.match("想知道股價[0-9]" , msg):
+    #     stockNumber = msg[5:9]
+    #     btn_msg = stock_reply_other(stockNumber)
+    #     line_bot_api.push_message(uid , btn_msg)
+    #     return 0
     
     # if(emsg.startswith('#')):
     #     text = emsg[1:]
