@@ -158,7 +158,8 @@ def handle_message(event):
                     content += "\n符合" + getstock + " = " + price + "的篩選條件"
                     line_bot_api.push_message(userID, TextSendMessage(text=content))
         def job():
-            print('HH')
+            print('啟動喔')
+            line_bot_api.push_message(uid , TextSendMessage("快買股票喔!"))
             dataList = cache_users_stock()
             # print(dataList)
             for i in range(len(dataList)):
