@@ -70,18 +70,23 @@ def handle_message(event):
         line_bot_api.push_message(uid , TextSendMessage(content))
        
     
-    #查詢股票篩選條件清單
+    # 查詢股票篩選條件清單
     if re.match('股票清單' , msg):
         line_bot_api.push_message(uid , TextSendMessage('請稍等一下 , 股票查詢中...'))
         content = show_stock_setting(user_name , uid)
         line_bot_api.push_message(uid , TextSendMessage(content))
-       
+
+    # 珊除存在資料庫裡面的股票
+    if re.match('刪除[0-9]{4}' , msg):
+        content = delete_my_stock(user_name , msg[2:])
+        line_bot_api.push_message(uid , TextSendMessage(content))
+
+    # 清空存在資料庫裡面的股票
+    if re.match('清空股票' , msg) :
+        content = delete_my_allstock(user_name , uid)
+        line_bot_api.push_message(uid , TextSendMessage(content))
+
     
-    # else:
-    #     content = write_my_stock(uid , user_name , stockNumber , "未設定" , "未設定")
-    #     line_bot_api.push_message(uid , TemplateSendMessage(content))
-    #     return 0
-        
     if (emsg.startswith('#')):
         text = emsg[1:]
         content =''
